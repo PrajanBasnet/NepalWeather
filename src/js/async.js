@@ -5,7 +5,9 @@ getLocation.addEventListener("click",()=>{
 })
 
 async function getData() {
-    let url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/pokhara?unitGroup=us&key=HF9YTHVFRDDSUMPKNZK3M648F&contentType=json";
+    let location = document.getElementById("location").value;
+
+    let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&key=HF9YTHVFRDDSUMPKNZK3M648F&contentType=json`;
     
     try {
         const response = await fetch(url);
@@ -13,7 +15,7 @@ async function getData() {
             throw new Error(`There was an Error ${response.status}`)
         }
         const responseInJson = await response.json();
-        console.log(responseInJson)
+        console.log(responseInJson.days[1])
     }catch(error){
         console.error("There was an Error: " + error.message);
     }
