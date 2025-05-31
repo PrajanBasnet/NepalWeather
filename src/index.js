@@ -1,2 +1,2 @@
 import "./assets/style.css"
-import { getData } from "./js/async.js"
+import { getData } from "./module/async.js"
