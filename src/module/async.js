@@ -6,11 +6,9 @@ let fahrenheit = "fahrenheit";
 
 getLocation.addEventListener("click", () => {
     if (degree.textContent === celcius) {
-        console.log("Celcuis clicked")
     getData("c")
     } else if (degree.textContent === fahrenheit) {
     getData("f")
-        console.log("Ferah clicked")
     }
 })
 
