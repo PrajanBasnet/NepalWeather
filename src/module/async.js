@@ -33,10 +33,11 @@ async function getData(drg) {
             throw new Error(`There was an Error ${response.status}`)
         }
         const responseInJson = await response.json();
-        changeInfo(responseInJson, drg)
+
+        changeInfo(responseInJson, drg )
     } catch (error) {
         console.error("There was an Error: " + error.message);
     }
 }
 
-export { getData }
+export { getData  }

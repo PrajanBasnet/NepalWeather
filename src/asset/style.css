@@ -40,16 +40,29 @@ body {
 
 input[type="text"] {
     padding: 13px;
-    
-}
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid  #174ea6;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
 
+}
+input[type="text"]:focus{
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+    border-bottom: 3px solid skyblue;
+
+}
 #infoOfWeather {
     display: flex;
     width: 600px;
-    height: 200px;
+    height: 300px;
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
 }
 
 .top{
@@ -138,4 +151,8 @@ h1{
 
 .button-17:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.myIcon{
+  border-radius: 53px;
 }
