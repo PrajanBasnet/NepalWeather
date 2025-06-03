@@ -4,17 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-    <script defer src="main.js"></script>
-  </head>
+  <script defer src="main.js"></script></head>
 
   <body>
     <div id="main">
       <div id="inputData">
-        <div class="inpt">
-          <div class="changeDegree">
-            <button class="button-17" id="degree">celcius</button>
-            <button class="button-17" id="loc">location</button>
-          </div>
+        <div class="changeDegree">
+          <button class="button-17" id="degree">celcius</button>
+          <button class="button-17" id="getTheLocation">Location</button>
+        </div>
+        <div class="today">
           <input
             type="text"
             name="Location"
@@ -24,12 +23,13 @@
           <img src="0c7ff96f07f6a1ada893.svg" alt="Location" id="getLocation" />
         </div>
       </div>
+
       <div id="infoOfWeather">
         <div id="temp"></div>
         <div id="info"></div>
         <div class="icon"></div>
       </div>
-      <div id="tomorow"></div>
     </div>
+    <div id="tomorow"></div>
   </body>
 </html>

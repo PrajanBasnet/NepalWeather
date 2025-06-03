@@ -8,7 +8,7 @@ export function changeInfo(data, derg) {
     feelsLike: parseInt(data.days[0].feelslike),
     windSpeed: parseInt(data.days[0].windspeed),
     icon: data.days[0].icon,
-    description: data.days[0].description
+    description: data.days[0].description,
   };
 
   if (derg === "f") {
@@ -19,4 +19,3 @@ export function changeInfo(data, derg) {
     tom("#tomorow", data, winInfo.tempInC);
   }
 }
-

@@ -1,7 +1,7 @@
 import { changeInfo } from "./infoOfWeather.js";
 let getLocation = document.getElementById("getLocation");
 let degree = document.querySelector("#degree");
-let getTheLocation = document.querySelector("#getTheLocation")
+let getTheLocation = document.querySelector("#getTheLocation");
 let celcius = "celcius";
 let fahrenheit = "fahrenheit";
 
@@ -13,9 +13,9 @@ getLocation.addEventListener("click", () => {
   }
 });
 
-getTheLocation.addEventListener("click",(e)=>{
+getTheLocation.addEventListener("click", (e) => {
   datafromLongitude();
-})
+});
 
 degree.addEventListener("click", (e) => {
   if (degree.textContent === celcius) {
@@ -43,29 +43,26 @@ async function getData(drg) {
   }
 }
 
-function getPosition(){
-  return new Promise((resolve,reject) =>{
-      navigator.geolocation.getCurrentPosition(resolve,reject);
-  })
+function getPosition() {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
 }
 
-async function  datafromLongitude(){
-
-  let position = await getPosition()
+async function datafromLongitude() {
+  let position = await getPosition();
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
   let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lat},${long}?unitGroup=us&key=HF9YTHVFRDDSUMPKNZK3M648F&contentType=json`;
-  
-  try{
-      const response = await fetch(url);
-      const responsInJson = await response.json();
 
-      console.log("Data success " , responsInJson);
-      changeInfo(responsInJson,"c");
-      }catch(err){
-        console.error("There was Error in Latitude and Longitude ", err );
-      }
+  try {
+    const response = await fetch(url);
+    const responsInJson = await response.json();
 
-   
+    console.log("Data success ", responsInJson);
+    changeInfo(responsInJson, "c");
+  } catch (err) {
+    console.error("There was Error in Latitude and Longitude ", err);
+  }
 }
 export { getData };
