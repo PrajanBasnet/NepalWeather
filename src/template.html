@@ -1,39 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="main">
-        <div id="inputData">
-            <div class="inpt">
-                <div class="changeDegree">
-                    <button  class="button-17" id="degree">celcius</button>
-                    <button  class="button-17" id="loc">location</button>
+      <div id="inputData">
+          <div class="changeDegree">
+            <button class="button-17" id="degree">celcius</button>
+            <button class="button-17" id="getTheLocation">Location</button>
 
-                </div>
-                <input type="text" name="Location" id="location" placeholder="Enter city Name">
-                <img src="./asset/img/location.svg" alt="Location" id="getLocation">
-                <!-- <img src="./asset/img/rain.avif" alt="Location" id="getLocation"> -->
+        </div>
+        <div class="today">
+          <input
+            type="text"
+            name="Location"
+            id="location"
+            placeholder="Enter city Name"
+          />
+          <img src="./asset/img/location.svg" alt="Location" id="getLocation" />
+        </div>
+      </div>
 
-            </div>
+      <div id="infoOfWeather">
+        <div id="temp">
         </div>
-        <div id="infoOfWeather">
-            <div id="temp">
-            </div>
-            <div id="info"></div>
-            <div class="icon">
-
-            </div>
-        </div>
-        <div id="tomorow">
-                
-        </div>
+        <div id="info"></div>
+        <div class="icon"></div>
+        
     </div>
-</body>
+</div>
+<div id="tomorow">
+    </div>
 
+  </body>
 </html>
